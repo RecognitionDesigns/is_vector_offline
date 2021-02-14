@@ -23,12 +23,12 @@ def send_alert():
     conn.getresponse()
     
 try:
-    if os.system("cd ~/VectorSdk/alert_run_once/") != 0:
+    if os.system("cd ~/alert_run_once/") != 0:
         raise Exception('folder does not exist')
 
 except:
     print("Running for the first time")
-    os.system("cd ~/VectorSdk/ && sudo mkdir alert_run_once")
+    os.system("cd ~/ && sudo mkdir alert_run_once")
     send_alert()
 
 
